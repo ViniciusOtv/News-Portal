@@ -14,6 +14,8 @@ namespace PortalConexao.Models
         public string SubTitulo { get; set; }
 
         public string Imagem { get; set; }
+
+        public int CidadeId { get; set; }
         
     }
 }

@@ -3,20 +3,32 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PortalConexao.DAL;
 
 namespace PortalConexao.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            return View();
+            var model = new Models.HomeIndexViewModel();
+
+            model.CidadeSelecionada = id;
+            model.Cidades = _dal.Cidades.ToArray();
+
+            if (id != null)
+            {
+                model.Noticias = model.Noticias
+                    .Where(p => p.CidadeId == id)
+                    .ToArray();
+            }
+            
+            return View(model);
         }
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
+           
             return View();
         }
 
