@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
 
 </head>
@@ -39,9 +41,18 @@
                        Cidades
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+
+                        @foreach (var item in ViewBag.Cidades)
+                        {
+                            if (item.Id == ViewBag.CidadeSelecionada)
+                            {
+                                <a class="dropdown-item" href="/Home/Index/?@item.Id">@item.Nome</a>
+                            }
+                            else
+                            {
+                                <a class="dropdown-item" href="/Home/Index/@item.Id">@item.Nome</a>
+                            }
+                        }
                     </div>
                 </li>
             </ul>

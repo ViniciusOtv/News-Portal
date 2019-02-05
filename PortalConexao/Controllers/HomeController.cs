@@ -15,6 +15,7 @@ namespace PortalConexao.Controllers
 
             model.CidadeSelecionada = id;
             model.Cidades = _dal.Cidades.ToArray();
+            model.Noticias = _dal.Noticias.ToArray();
 
             if (id != null)
             {

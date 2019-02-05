@@ -1,3 +1,27 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Conexão Oeste";
+}
+
+@model PortalConexao.Models.HomeIndexViewModel
+
+@if (Model.Noticias.Length == 0)
+{
+    <div class="row">
+        <span> Não há noticias para serem exibidas</span>
+    </div>
+}
+else
+{
+    <div class="row">
+        @foreach (var item in Model.Noticias)
+        {
+            <div class="card espacos shadow-lg p-3 mb-5 bg-white rounded" style="width: 18rem; margin-top: 50px" >
+                <img class="card-img-top" src="@item.Imagem" alt="Imagens Noticias">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Titulo</h5>
+                    <p class="card-text">@item.SubTitulo</p>
+                </div>
+            </div>
+        }
+    </div>
 }
