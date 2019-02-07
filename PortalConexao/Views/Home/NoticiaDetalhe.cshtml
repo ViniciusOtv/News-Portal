@@ -15,13 +15,19 @@
 
 else
 {
-    <div class="row float-sm-left">
+    <div class="row container-fluid" style = "margin-left: 2px">
         
         @foreach (var item in Model.Noticias)
         {
-            <h5 class="article-title">@item.Titulo </h5>
+          <h5 class="article-title container-fluid">@item.Titulo </h5>
+        }
+    </div>
+    <div class="row container-fluid" style = "margin-left: 2px">
+        @foreach (var item in Model.Noticias)
+        {
             <p class="article-body">@item.Conteudo</p>
         }
+
     </div>
 }
 
