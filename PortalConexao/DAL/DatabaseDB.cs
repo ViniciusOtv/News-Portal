@@ -18,7 +18,7 @@ namespace PortalConexao.DAL
 
         static private string GetConnectionString()
         {
-            return @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ConexaoDb; Integrated Security=true;";
+            return @"Data Source=LAPTOP-70KGFJC5;Initial Catalog=ConexaoDb; Integrated Security=true;";
         }
 
         public DatabaseDB() : base(GetConnectionString())

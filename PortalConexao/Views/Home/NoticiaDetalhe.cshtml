@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Noticia";
+}
+
+@model PortalConexao.Models.HomeIndexViewModel
+
+@if (Model.Noticias.Length == 0)
+{
+    <div class="row">
+        <span> Não há noticias para serem exibidas</span>
+    </div>
+}
+
+
+else
+{
+    <div class="row float-sm-left">
+        
+        @foreach (var item in Model.Noticias)
+        {
+            <h5 class="article-title">@item.Titulo </h5>
+            <p class="article-body">@item.Conteudo</p>
+        }
+    </div>
+}
+
+

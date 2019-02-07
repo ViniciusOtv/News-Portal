@@ -3,7 +3,7 @@ namespace PortalConexao.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AtualizaNoticia : DbMigration
+    public partial class Migracao : DbMigration
     {
         public override void Up()
         {

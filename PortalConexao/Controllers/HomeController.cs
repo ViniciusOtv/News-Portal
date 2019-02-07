@@ -23,13 +23,25 @@ namespace PortalConexao.Controllers
                     .Where(p => p.CidadeId == id)
                     .ToArray();
             }
-            
+
+            return View(model);
+        }
+
+        public ActionResult NoticiaDetalhe(int id, int? Categoria)
+        {
+            var model = new Models.HomeIndexViewModel();
+            model.Noticias = _dal.Noticias.ToArray();
+
+
+            model.Noticias = model.Noticias
+                .Where(p => p.Id == id)
+                .ToArray();
+
             return View(model);
         }
 
         public ActionResult About()
         {
-           
             return View();
         }
 
