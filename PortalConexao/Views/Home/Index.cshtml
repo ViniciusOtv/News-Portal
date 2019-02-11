@@ -15,15 +15,17 @@ else
     <div class="row container-fluid">
         @foreach (var item in Model.Noticias)
         {
-            <div class="card espacos p-3 mb-5 bg-white rounded" style="width: 18rem; margin-top: 50px" >
-                <a href="/Home/NoticiaDetalhe/@item.Id">
-                    <img class="card-img-top" src="@item.Imagem" alt="Imagens Noticias">
+            <div class="card espacos" style="width: 18rem;">
+                <a href="/Home/NoticiaDetalhe/@item.Id" class="alert-link">
+                    <img src="@item.Imagem" class="card-img-top" alt="Imagens Noticias">
                     <div class="card-body">
-                        <h5 class="card-title">@item.Titulo </h5>
+                        <h5 class="card-title">@item.Titulo</h5>
                         <p class="card-text">@item.SubTitulo</p>
+
                     </div>
                 </a>
             </div>
         }
     </div>
+
 }
