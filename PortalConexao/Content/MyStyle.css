@@ -3,13 +3,27 @@
     margin-left: 50px;
 }
 
+.title-card {
+    color: rgba(0,0,0,0.9);
+}
+
+.body-card {
+   color: rgba(0,0,0,0.75);
+}
+
+a:link
+{
+    text-decoration : none;
+}
+
+
+
 
 .article-title {
     font-size: 1.55rem;
     line-height: 1.2;
     font-weight: 600;
     color: rgba(0,0,0,0.9);
-    padding: 16px 0;
     margin-top: 10px;
     margin-left: 20px;
 }
