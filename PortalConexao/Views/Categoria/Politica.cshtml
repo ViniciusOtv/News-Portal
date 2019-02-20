@@ -13,19 +13,21 @@
 else
 {
     <div class="row container-fluid" style="margin-top: 60px">
+
         @foreach (var item in Model.Noticias)
         {
+          
             <div class="card espacos" style="width: 18rem;">
-               
+
                 <a href="/Home/NoticiaDetalhe/@item.Id">
                     <img src="@item.Imagem" class="card-img-top" alt="Imagens Noticias">
                     <div class="card-body">
                         <h5 class="card-title title-card">@item.Titulo</h5>
-                        <p class="card-text body-card" >@item.SubTitulo</p>
-
+                        <p class="card-text body-card">@item.SubTitulo</p>
                     </div>
                 </a>
             </div>
+            
         }
     </div>
 }

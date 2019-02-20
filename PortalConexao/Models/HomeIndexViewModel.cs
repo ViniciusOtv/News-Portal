@@ -12,6 +12,10 @@ namespace PortalConexao.Models
 
         public Noticia[] Noticias { get; set; }
 
+        public Categoria[] Categorias { get; set; }
+
         public int? CidadeSelecionada { get; set; }
+
+        public int? CategoriaSelecionada { get; set; }
     }
 }

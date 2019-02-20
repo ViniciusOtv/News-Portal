@@ -11,6 +11,6 @@ namespace PortalConexao.Models
 
         public string Nome { get; set; }
         
-        public Noticia[] Noticias { get; set; }   
+        public List<Noticia> Noticias { get; set; }   
     }
 }

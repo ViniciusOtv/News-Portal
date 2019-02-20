@@ -7,13 +7,13 @@ namespace PortalConexao.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Migracao : IMigrationMetadata
+    public sealed partial class atualizadatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Migracao));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(atualizadatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "201902061454538_Migracao"; }
+            get { return "201902201940235_atualizadatabase"; }
         }
         
         string IMigrationMetadata.Source

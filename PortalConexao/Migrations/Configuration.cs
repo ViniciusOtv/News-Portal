@@ -10,7 +10,6 @@ namespace PortalConexao.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "PortalConexao.DAL.DatabaseDB";
         }
 
         protected override void Seed(PortalConexao.DAL.DatabaseDB context)
