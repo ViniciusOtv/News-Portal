@@ -16,7 +16,16 @@ a:link
     text-decoration : none;
 }
 
+.font-menu
+{
+   font-family: proximanova-light,Arial,sans-serif;
+   vertical-align: middle;
+}
 
+.font-li
+{ 
+   font-weight: 500;  
+}
 
 
 .article-title {

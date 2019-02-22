@@ -27,22 +27,75 @@ namespace PortalConexao.Controllers
             return View(model);
         }
 
-        public ActionResult Esportes()
+        public ActionResult Esportes(int? id)
         {
-            return View();
+            var model = new Models.HomeIndexViewModel();
+
+            model.CategoriaSelecionada = id;
+            model.Categorias = _dal.Categorias.ToArray();
+            model.Noticias = _dal.Noticias.ToArray();
+
+            if (id != null)
+            {
+                model.Noticias = model.Noticias
+                    .Where(p => p.CategoriaId == id)
+                    .ToArray();
+            }
+
+            return View(model);
         }
 
-        public ActionResult InfraEstrutura()
+        public ActionResult InfraEstrutura(int? id)
         {
-            return View();
+            var model = new Models.HomeIndexViewModel();
+
+            model.CategoriaSelecionada = id;
+            model.Categorias = _dal.Categorias.ToArray();
+            model.Noticias = _dal.Noticias.ToArray();
+
+            if (id != null)
+            {
+                model.Noticias = model.Noticias
+                    .Where(p => p.CategoriaId == id)
+                    .ToArray();
+            }
+
+            return View(model);
         }
-        public ActionResult Entretenimento()
+        public ActionResult Entretenimento(int? id)
         {
-            return View();
+            var model = new Models.HomeIndexViewModel();
+
+            model.CategoriaSelecionada = id;
+            model.Categorias = _dal.Categorias.ToArray();
+            model.Noticias = _dal.Noticias.ToArray();
+
+            if (id != null)
+            {
+                model.Noticias = model.Noticias
+                    .Where(p => p.CategoriaId == id)
+                    .ToArray();
+            }
+
+            return View(model);
         }
-        public ActionResult Saude()
+
+        public ActionResult Saude(int? id)
         {
-            return View();
+            var model = new Models.HomeIndexViewModel();
+
+            model.CategoriaSelecionada = id;
+            model.Categorias = _dal.Categorias.ToArray();
+            model.Noticias = _dal.Noticias.ToArray();
+
+            if (id != null)
+            {
+                model.Noticias = model.Noticias
+                    .Where(p => p.CategoriaId == id)
+                    .ToArray();
+            }
+
+            return View(model);
         }
     }
 }
