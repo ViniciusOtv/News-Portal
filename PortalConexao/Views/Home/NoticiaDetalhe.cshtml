@@ -15,17 +15,16 @@
 
 else
 {
-    <div class="row container-fluid" style = "margin-left: 2px; margin-top: 60px">
-        
+    <div class="row container-fluid" style="margin-left: 2px; margin-top: 60px">
+
         @foreach (var item in Model.Noticias)
         {
-          <h5 class="article-title container-fluid">@item.Titulo </h5>
-        }
-    </div>
-    <div class="row container-fluid" style = "margin-left: 2px">
-        @foreach (var item in Model.Noticias)
-        {
-            <p class="article-body">@item.Conteudo</p>
+            <h5 class="article-title container-fluid">@item.Titulo </h5>
+            @*<img src="@item.Imagem" class=".img-fluid. max-width: 100%" alt="@item.DetalheImagem" />*@
+            <div class="row container-fluid" style="margin-left: 2px">
+
+                <p class="article-body">@item.Conteudo</p>
+            </div>
         }
 
     </div>

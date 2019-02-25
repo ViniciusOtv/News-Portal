@@ -29,16 +29,18 @@ a:link
 
 
 .article-title {
-    font-size: 1.55rem;
+    font-size: 2rem;
     line-height: 1.2;
     font-weight: 600;
     color: rgba(0,0,0,0.9);
-    margin-top: 10px;
-    margin-left: 20px;
+    padding: 16px 0;
+    margin-left: 50px;
 }
 
 .article-body {
+   
     font-size: 4rem;
+    margin-left : 50px;
     margin-top: 30px;
     line-height: 1.75rem;
     padding: 0;
