@@ -37,26 +37,24 @@ a:link
 }
 .article-title {
     font-size: 3.0rem;
-    font-weight: 100;
     line-height: 1.2;
     color: rgba(0,0,0,0.9);
     padding: 16px;
-    margin-left: 10px;
     margin-top: 20px;
-    
-    margin-top: 50px;/*background-color: pink;*/
+    background-color: pink;
+    margin-left: 180px;
+   width: 60%;
 }
 
 .subtitle {
-    width: 95%;
+    width: 50%;
     color: #555;
     font-size: 1.25rem;
     line-height: 1.75rem;
     text-align: left;
-    font-size: 100%;
-    margin-top: 10px;
-    margin-left: 10px;
-    /*background-color: purple;*/
+    margin-top: 1px;
+    margin-left: 200px;
+    background-color: purple;
 }
 
 .article-body {
@@ -66,7 +64,7 @@ a:link
     margin-top: 30px;
     line-height: 1.75rem;
     font-size: 100%;
-    /*background-color : lawngreen;*/
+    background-color : lawngreen;
 }
 
 .content-head {
