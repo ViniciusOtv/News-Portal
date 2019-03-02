@@ -21,11 +21,15 @@ else
         @foreach (var item in Model.Noticias)
         {
             <div class="article-title container-fluid">
-                <h1>@item.Titulo </h1>
+                <h2>@item.Titulo </h2>
             </div>
 
             <div class="subtitle">
-                <h2>@item.SubTitulo</h2>
+                <h5>@item.SubTitulo</h5>
+            </div>
+
+            <div class="container-fluid div-text">
+                <img class="img-fluid" src="@item.Imagem" alt="Alternate Text" />
             </div>
 
             <div class="row container-fluid" style="margin-left: 2px">
