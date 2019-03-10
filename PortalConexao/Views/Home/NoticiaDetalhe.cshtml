@@ -21,11 +21,12 @@ else
         @foreach (var item in Model.Noticias)
         {
             <div class="article-title container-fluid">
-                <h2>@item.Titulo </h2>
+                <h1>@item.Titulo </h1>
             </div>
 
             <div class="subtitle">
                 <h5>@item.SubTitulo</h5>
+                <p style="font-size:15px;">@item.DataPublicacao.ToLongDateString()</p>
             </div>
 
             <div class="container-fluid div-text">
@@ -34,7 +35,7 @@ else
             </div>
 
             <div class="row container-fluid" style="margin-left: 2px">
-                <p class="article-body" style="font-weight: 600">@item.Conteudo</p>
+                <p class="article-body" style="font-weight: 400">@item.Conteudo</p>
             </div>
            
         }

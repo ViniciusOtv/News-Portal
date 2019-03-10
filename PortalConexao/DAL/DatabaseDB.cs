@@ -1,29 +1,28 @@
-﻿using System;
+﻿using MySql.Data.Entity;
 using PortalConexao.Models;
 using System.Data.Entity;
-using System.Web;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace PortalConexao.DAL
 {
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class DatabaseDB : DbContext
     {
- 
+        public DatabaseDB()
+            : base("devDb")
+        {
+
+        }
+
+        public static DatabaseDB Create()
+        {
+            return new DatabaseDB();
+        }
+
         public IDbSet<Cidade> Cidades { get; set; }
 
         public IDbSet<Noticia> Noticias { get; set; }
 
         public IDbSet<Categoria> Categorias { get; set; }
 
-        static private string GetConnectionString()
-        {
-            return @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=ConexaoDb; Integrated Security=true;";
-        }
-
-        public DatabaseDB() : base(GetConnectionString())
-        {
-            GetConnectionString();
-        }
     }
 }

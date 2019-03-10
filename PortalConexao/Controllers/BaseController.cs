@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using PortalConexao.DAL;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using PortalConexao.Models;
-using System.Data.Entity;
-using PortalConexao.DAL;
 
 namespace PortalConexao.Controllers
 {
