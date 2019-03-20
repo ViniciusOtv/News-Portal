@@ -81,6 +81,12 @@ a:link
     padding: 0;
     margin-top: 64px;
 }
+.banner_top {
+    width: 900px;
+    height: 110px;
+    float: right;
+    margin-right: 20px;
+}
 
 @media screen and (max-width: 770px){
     .article-title {
