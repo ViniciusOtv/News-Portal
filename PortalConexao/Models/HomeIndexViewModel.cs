@@ -14,6 +14,8 @@ namespace PortalConexao.Models
 
         public Categoria[] Categorias { get; set; }
 
+        public Carousel[] Carousels { get; set; }
+
         public int? CidadeSelecionada { get; set; }
 
         public int? CategoriaSelecionada { get; set; }

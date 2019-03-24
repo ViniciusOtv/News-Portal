@@ -8,7 +8,7 @@ namespace PortalConexao.DAL
     public class DatabaseDB : DbContext
     {
         public DatabaseDB()
-            : base("devDb")
+            : base("JornalDb")
         {
 
         }
@@ -23,6 +23,8 @@ namespace PortalConexao.DAL
         public IDbSet<Noticia> Noticias { get; set; }
 
         public IDbSet<Categoria> Categorias { get; set; }
+
+        public IDbSet<Carousel> Carousels { get; set; }
 
     }
 }

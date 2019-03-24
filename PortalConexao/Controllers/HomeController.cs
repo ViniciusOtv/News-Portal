@@ -12,6 +12,7 @@ namespace PortalConexao.Controllers
             model.CidadeSelecionada = id;
             model.Cidades = _dal.Cidades.ToArray();
             model.Noticias = _dal.Noticias.ToArray();
+            model.Carousels = _dal.Carousels.ToArray();
 
             if (id != null)
             {
@@ -34,6 +35,19 @@ namespace PortalConexao.Controllers
                 .ToArray();
 
             return View(model);
+        }
+
+        public ActionResult DetalheCarousel(int id)
+        {
+            var model = new Models.HomeIndexViewModel();
+            model.Carousels = _dal.Carousels.ToArray();
+
+            model.Carousels = model.Carousels
+                .Where(p => p.CarouselId == id)
+                .ToArray();
+
+            return View(model);
+
         }
 
     }

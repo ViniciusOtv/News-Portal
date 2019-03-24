@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Noticia";
+}
+
+@model PortalConexao.Models.HomeIndexViewModel
+
+@if (Model.Carousels.Length == 0)
+{
+    <div class="row">
+        <span> Não há noticias para serem exibidas</span>
+    </div>
+}
+
+
+else
+{
+
+    <div class="row container-fluide">
+
+        @foreach (var item in Model.Carousels)
+        {
+            <div class="article-title container-fluid">
+                <h1>@item.Titulo </h1>
+            </div>
+
+            <div class="subtitle">
+                <h5>@item.SubTitulo</h5>
+                <p style="font-size:15px;">@item.DataPublicacao.ToLongDateString()</p>
+            </div>
+
+            <div class="container-fluid div-text">
+                <img class="img-fluid" src="@item.Imagem" alt="Alternate Text" />
+                <p style="font-size: 0.8rem;">@item.DetalheImagem </p>
+            </div>
+
+            <div class="row container-fluid" style="margin-left: 2px">
+                <p class="article-body" style="font-weight: 400">@item.Conteudo</p>
+            </div>
+
+        }
+
+
+    </div>
+}
+
+
