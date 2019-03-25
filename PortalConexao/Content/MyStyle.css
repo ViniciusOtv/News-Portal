@@ -88,7 +88,79 @@ a:link
     margin-right: 20px;
 }
 
-@media screen and (max-width: 770px){
+.meio {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    word-wrap: break-word;
+    background-color: blue;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    margin-bottom: 50px;
+    float: left;
+    margin-top : 20px;
+    flex-wrap: nowrap;
+}
+
+.esquerdo {
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: purple;
+    width: 45%;
+    height: 90%;
+}
+.direito{
+    position: absolute;
+    float: right;
+    /*margin-left: 530px;*/   
+    margin-top: 20px;
+    background-color: red; 
+    width: 51%;
+    height: 40%;
+  
+}
+
+.direita-esquerda {
+    position: absolute;
+    float: right;
+    /*margin-left: 530px;*/
+    margin-top: 230px;
+    background-color: yellow;
+    width: 280px;
+    height: 47%;
+}
+
+.direita-direita {
+    position: absolute;
+    float: right;
+    /*margin-left: 820px;*/
+    margin-top: 230px;
+    background-color: forestgreen;
+    width: 280px;
+    height: 47%;
+}
+
+.font-card {
+    text-shadow: 0 1px 3px rgba(0,0,0,.8); 
+    color:#fff; 
+    font-size: 20px; 
+    display: flex; 
+    align-content: flex-end;
+}
+
+.size-carousel {
+    width: 680px;
+    height : auto;   
+}
+
+@media screen and (max-width: 770px) {
     .article-title {
         width: 95%;
         font-size: 2rem;
