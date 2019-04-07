@@ -11,8 +11,9 @@ namespace PortalConexao.Controllers
 
             model.CidadeSelecionada = id;
             model.Cidades = _dal.Cidades.ToArray();
-            model.Noticias = _dal.Noticias.ToArray();
+            model.Noticias = _dal.Noticias.OrderByDescending(p => p.Id).ToArray();
             model.Carousels = _dal.Carousels.ToArray();
+
 
             if (id != null)
             {
